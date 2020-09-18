@@ -1,0 +1,43 @@
+# Describes the format for available services
+
+add:
+  description: Add a new schedule.
+  fields:
+    schedule_id:
+      description: Identifier for this schedule.
+      example: 'working hours'
+    after:
+      description: Time in military format 00:00:00, or sunrise/sunset +/- offset
+      example: 'sunset + 00:30:00'
+    before:
+      description: Time in military format 00:00:00, or sunrise/sunset +/- offset
+      example: '10:00:00'
+    weekdays:
+      description: (optional) Limit this schedule to days of the week ? (mon, tue, wed, thu, fri, sat, sun, workday, not_workday). 
+      example:
+        - workday
+        - sat
+update:
+  description: Update one or more fields of an existing schedule.
+  fields:
+    schedule_id:
+      description: The schedule ID of the schedule you want to update.
+      example: 'working hours'
+    after:
+      description: (optional, leave blank to leave current) Time in military format 00:00:00, or sunrise/sunset +/- offset
+      example: 'sunset + 00:30:00'
+    before:
+      description: (optional, leave blank to leave current) Time in military format 00:00:00, or sunrise/sunset +/- offset
+      example: '10:00:00'
+    weekdays:
+      description: (optional, leave blank to leave current) Limit this schedule to days of the week ? (mon, tue, wed, thu, fri, sat, sun, workday, not_workday). To use the special workday and not_workday days, you need to have the workday sensor configured.
+      example:
+        - workday
+        - sat
+
+delete:
+  description: Delete an existing schedule.
+  fields:
+    schedule_id:
+      description: The schedule ID of the schedule you want to delete.
+      example: 'working hours'

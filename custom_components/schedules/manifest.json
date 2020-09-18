@@ -1,0 +1,11 @@
+{
+	"domain": "schedules",
+	"name": "Schedules",
+	"config_flow": true,
+	"documentation": "",
+	"requirements": [],
+	"ssdp": [],
+	"homekit": {},
+	"dependencies": [],
+	"codeowners": ["@marcelveldt"]
+}

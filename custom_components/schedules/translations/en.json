@@ -1,0 +1,30 @@
+{
+	"config": {
+	  "title": "Schedules",
+	  "step": {
+		"user": {
+		  "title": "Preferences",
+		  "data": {
+			"workday_sensor": "Workday sensor entity_id"
+		  }
+		}
+	  },
+	  "error": {
+		"unknown": "Unexpected error",
+		"invalid_sensor": "Please specify a binary sensor for the workday sensor!"
+	  },
+	  "abort": {
+		"already_configured": "This platform is already configured"
+	  }
+	},
+	"options": {
+	  "step": {
+		"init": {
+		  "data": {
+			"workday_sensor": "Workday sensor entity_id"
+		  }
+		}
+	  }
+	}
+  }
+  
