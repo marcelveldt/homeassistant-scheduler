@@ -22,3 +22,7 @@ For example a schedule called "workday morning" which is active when the day is 
 - You can add/update/remove schedules through service calls.
 
 
+![Screenshot](screenshots/screen1.png)
+
+
+![Screenshot](screenshots/screen2.png)
