@@ -175,13 +175,9 @@ class ScheduleSensor(BinarySensorEntity):
                 )
         # append listener(s) for templated condition
         if self._condition_template:
-            entities = self._condition_template.extract_entities()
-            if entities and entities != "*":
-                self._state_listeners.append(
-                    async_track_template(
-                        self.hass, self._condition_template, event_fired
-                    )
-                )
+            self._state_listeners.append(
+                async_track_template(self.hass, self._condition_template, event_fired)
+            )
         # append listener for workday sensor
         workday_sensor = self.hass.data[const.DATA_DOMAIN][const.DATA_WORKDAY_SENSOR]
         if workday_sensor:
